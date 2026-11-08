@@ -1,0 +1,170 @@
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/Inter-400.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/Inter-500.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/Inter-600.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/Inter-700.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 800; font-display: swap; src: url('fonts/Inter-800.ttf') format('truetype'); }
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(180deg,#0a0a0a 0%,#121212 100%);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15,15,15,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,122,0,0.15);
+    padding: 12px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    width: 150px;
+    border-radius: 12px;
+}
+.nav-links { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.nav-links a {
+    margin: 0;
+    color: #e5e5e5;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: background .15s, color .15s;
+}
+.nav-links a:hover {
+    color: #fff;
+    background: rgba(255,122,0,0.15);
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #1a1a1a;
+    border: 3px solid orange;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px orange;
+}
+
+.card h2 {
+    color: orange;
+}
+
+.card h3 {
+    margin-top: 15px;
+    color: #ffb84d;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: orange;
+    color: black;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ff9900;
+}
+
+/* ORDER BUTTON */
+.order-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.order-btn:hover {
+    background: #ff9900;
+}
+
+/* ================= SIDEBAR ================= */
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: orange;
+    color: black;
+    font-size: 28px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100%;
+    background: #1a1a1a;
+    border-right: 3px solid orange;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 70px;
+
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 25px;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: orange;
+    color: black;
+}
+
+.close-side {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
